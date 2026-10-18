@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revista Obsoleta</title>
+<meta name="description" content="Obsoleta nº 1: A vida depois do descarte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="bar" id="bar" aria-label="Navegação da revista">
+  <div class="bar-in">
+    <b>OBSO<span>LETA</span></b>
+    <ol class="rota" id="rota" aria-label="Capítulos">
+      <li><a href="#cap1" title="1. Quando o que funciona começa a parecer velho">1</a></li>
+      <li><a href="#cap2" title="2. A gaveta ainda não é o destino">2</a></li>
+      <li><a href="#cap3" title="3. A entrega é uma passagem">3</a></li>
+      <li><a href="#cap4" title="4. Antes de desmontar, alguém precisa avaliar">4</a></li>
+      <li><a href="#cap5" title="5. Voltar a ligar não resolve tudo">5</a></li>
+      <li><a href="#cap6" title="6. Quando um aparelho se torna muitas partes">6</a></li>
+      <li><a href="#cap7" title="7. O que pode voltar à produção">7</a></li>
+      <li><a href="#cap8" title="8. Quem trabalha entre uma vida e outra">8</a></li>
+      <li><a href="#cap9" title="9. O que sobra também tem destino">9</a></li>
+      <li><a href="#cap10" title="10. A responsabilidade continua depois da entrega">10</a></li>
+    </ol>
+    <a class="to-toc" href="#sumario">Sumário ↑</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<!-- ============ CAPA ============ -->
+<header class="page cover" id="capa" aria-label="Capa">
+  <img class="bg" id="cover-bg" src="img/capa.jpg" alt="Homem carrega um televisor de tubo nos ombros em um pátio tomado por televisores antigos, placas de circuito e fios">
+  <div class="glow"></div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="cover-in">
+    <div class="mast">
+      <h1 aria-label="Obsoleta"><span class="l" style="--i:0">O</span><span class="l" style="--i:1">b</span><span class="l" style="--i:2">s</span><span class="l" style="--i:3">o</span><span class="l hot" style="--i:4">l</span><span class="l hot" style="--i:5">e</span><span class="l hot" style="--i:6">t</span><span class="l hot" style="--i:7">a</span></h1>
+      <div class="meta">Edição nº 1<br>Outubro 2026<br>Instituto J&amp;F · Multidisciplinar</div>
+    </div>
+    <p class="edition-title">A vida depois do descarte</p>
+    <div class="dialog" id="dialog" role="group" aria-label="Manchete da capa">
+      <div class="dialog-b">
+        <h2 id="dlg-h" data-text="Seu planeta precisa ser atualizado">Seu planeta precisa ser atualizado</h2>
+        <p id="dlg-p">62 milhões de toneladas de lixo eletrônico foram geradas em 2022. A reciclagem documentada não acompanha. Reiniciar o modelo de consumo pode levar algum tempo.</p>
+        <div class="prog" aria-hidden="true"><i id="dlg-bar"></i></div>
+        <div class="pct" id="dlg-pct" aria-hidden="true">Instalando… 0%</div>
+        <div class="btns">
+          <button id="dlg-later">Lembrar mais tarde</button>
+          <button class="pri" id="dlg-now">Ler a reportagem</button>
+        </div>
+        <p class="dlg-src" id="dlg-src">Fonte: UNITAR/ITU, Global E-waste Monitor 2024.</p>
+      </div>
+    </div>
+    <div class="teasers">
+      <div><b>Quando o que funciona começa a parecer velho</b><span>Um celular pode continuar ligando e, ainda assim, deixar de parecer suficiente.</span></div>
+      <div><b>62 milhões de toneladas</b><span>de resíduos eletrônicos em 2022, média de 7,8 kg por habitante.</span></div>
+      <div><b>Quem trabalha entre uma vida e outra</b><span>Pessoas recebem, transportam, testam, consertam, desmontam e separam.</span></div>
+    </div>
+  </div>
+  <span class="scroll-hint" aria-hidden="true">role ↓</span>
+</header>
+
+<!-- ============ INTEGRANTES ============ -->
+<section class="page" id="integrantes" aria-labelledby="int-h">
+  <div class="int-head">
+    <div>
+      <p class="kicker reveal">Quem fez esta edição</p>
+      <h2 id="int-h" class="split">Integrantes</h2>
+    </div>
+    <p class="cap reveal" data-d="1">Instituto J&amp;F · Trabalho Multidisciplinar · São Paulo, 2026</p>
+  </div>
+  <div class="members">
+    <article class="member reveal"><span class="idx">01</span><h3>Caio Mezini</h3><p class="member-full">Caio Mezini de Paula Machado</p></article>
+    <article class="member reveal" data-d="1"><span class="idx">02</span><h3>David Bento</h3><p class="member-full">David Lucas Reche Garcia Bento</p></article>
+    <article class="member reveal" data-d="2"><span class="idx">03</span><h3>Guilherme Ferreira</h3><p class="member-full">Guilherme Fernandes Marcato Ferreira</p></article>
+    <article class="member reveal"><span class="idx">04</span><h3>Matheus Raimundo</h3><p class="member-full">Matheus Rezende Nascimento Raimundo</p></article>
+    <article class="member reveal" data-d="1"><span class="idx">05</span><h3>Pedro Casarini</h3><p class="member-full">Pedro Henrique Casarini Alves</p></article>
+    <article class="member reveal" data-d="2"><span class="idx">06</span><h3>Pedro Yada Barbeitos</h3><p class="member-full">Pedro Yada Barbeitos</p></article>
+  </div>
+  <span class="folio">OBSOLETA · 02</span>
+</section>
+
+<!-- ============ EDITORIAL ============ -->
+<section class="page" id="editorial" aria-labelledby="ed-h">
+  <div class="cols">
+    <div class="span7">
+      <p class="kicker reveal">Opinião da equipe</p>
+      <h2 id="ed-h" class="split">Editorial</h2>
+      <div class="body reveal" style="margin-top:20px">
+        <p class="drop">Na obra <em>O Princípio Responsabilidade</em>, Hans Jonas defende que o avanço tecnológico deve considerar suas consequências para as futuras gerações. Entretanto, a substituição acelerada de dispositivos e o descarte inadequado de resíduos eletrônicos contrariam esse princípio. Nesse cenário, a lógica consumista intensifica a geração de lixo eletrônico, enquanto sua gestão inadequada ameaça comunidades vulneráveis.</p>
+        <p>A crescente geração desses resíduos resulta de um sistema econômico que incentiva a troca constante de aparelhos. Segundo Jean Baudrillard, os objetos são consumidos não apenas pela utilidade, mas pelo significado social que carregam. Assim, a publicidade estimula a obsolescência percebida, fazendo produtos funcionais parecerem ultrapassados. Essa renovação precoce intensifica a extração de recursos naturais e a produção de resíduos, impondo custos socioambientais que ultrapassam o preço dos aparelhos.</p>
+        <p>Além disso, a gestão inadequada dos resíduos amplia a exposição de comunidades vulneráveis. O caso histórico de Guiyu, na China, marcado pelo processamento de lixo eletrônico, evidencia os danos dessa atividade. Práticas como a queima de componentes e o desmonte sem controle ambiental podem liberar metais pesados e substâncias tóxicas, contaminando o ambiente e ameaçando trabalhadores e moradores. Dessa forma, os impactos do descarte recaem desproporcionalmente sobre populações vulneráveis, revelando a desigualdade dessa cadeia.</p>
+        <p>Portanto, o poder público, junto a órgãos ambientais e empresas tecnológicas, deve fortalecer a logística reversa e fiscalizar o tratamento dos resíduos eletrônicos. Para isso, deve ampliar a coleta formal e o rastreamento dos materiais, responsabilizando fabricantes pelo ciclo de vida dos aparelhos e exigindo reparabilidade e informações claras sobre sua durabilidade. Também deve coibir publicidade que estimule substituições precoces. Assim, será possível reduzir a geração de resíduos e os danos às comunidades vulneráveis, conciliando inovação e responsabilidade socioambiental.</p>
+      </div>
+    </div>
+    <aside class="span5 aside">
+      <blockquote class="box olho reveal"><p>Os impactos do descarte recaem desproporcionalmente sobre populações vulneráveis.</p></blockquote>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 03</span>
+</section>
+
+<!-- ============ APRESENTAÇÃO ============ -->
+<section class="page" id="apresentacao" aria-labelledby="ap-h">
+  <div class="cols">
+    <div class="span7">
+      <p class="kicker reveal">Apresentação</p>
+      <h2 id="ap-h" class="split">O que acontece quando deixamos de olhar</h2>
+      <div class="body reveal" style="margin-top:20px">
+        <p class="drop">É fácil reconhecer o começo da vida de um aparelho na nossa rotina. Lembramos da compra, da primeira configuração, da expectativa de usar algo novo. Já o fim costuma ser menos definido: uma tela quebrada, uma atualização que não chega, uma gaveta que vai ficando cheia.</p>
+        <p>Mesmo quando entregamos o equipamento para coleta, sabemos pouco sobre o que acontece depois. Quem o recebe? Alguém tenta fazê-lo funcionar? Para onde seguem suas peças? O que não pode ser aproveitado?</p>
+        <p>Esta edição acompanha esses caminhos. Para entendê-los, também precisamos voltar um pouco: por que substituímos aparelhos e como eles perdem valor para nós?</p>
+        <p>O tamanho desse percurso aparece nos dados. O Global E-waste Monitor 2024, relatório do Instituto das Nações Unidas para Treinamento e Pesquisa (UNITAR) e da União Internacional de Telecomunicações (UIT, ou ITU na sigla em inglês), estima que o mundo gerou <strong>62 milhões de toneladas</strong> de resíduos eletrônicos em 2022, média de <strong>7,8 kg</strong> por habitante. São indicadores globais; não descrevem quanto cada pessoa efetivamente descartou (UNITAR/ITU, 2024).</p>
+        <p>Dois sociólogos ajudam nessa leitura. O polonês Zygmunt Bauman descreveu uma sociedade de consumidores, em que o desejo de comprar precisa ser renovado sem parar e a satisfação com cada compra dura pouco. O francês Pierre Bourdieu mostrou que o gosto não é só pessoal: ele se relaciona às condições sociais de cada grupo, e os objetos que escolhemos comunicam pertencimento e posição social. A partir dessas perguntas, seguimos o equipamento até encontrar quem avalia, conserta, separa e processa aquilo que deixamos para trás.</p>
+        <p>Somos estudantes de desenvolvimento de sistemas. Essa história também nos envolve: as escolhas de software podem ampliar ou restringir o tempo durante o qual um aparelho permanece útil.</p>
+      </div>
+    </div>
+    <aside class="span5 aside">
+      <div class="box stat reveal">
+        <span class="box-tag">UNITAR/ITU, 2024</span>
+        <div class="big"><span class="count" data-to="62">62</span> <small class="unit">milhões de toneladas</small></div>
+        <p class="stat-l">de resíduos eletrônicos gerados no mundo em 2022</p>
+        <hr>
+        <div class="big b2"><span class="count" data-to="7.8" data-dec="1">7,8</span> <small>kg</small></div>
+        <p class="stat-l">média por habitante</p>
+      </div>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 04</span>
+</section>
+
+<!-- ============ SUMÁRIO ============ -->
+<section class="page" id="sumario" aria-labelledby="sum-h">
+  <div class="cols">
+    <div class="span5">
+      <p class="kicker reveal">Nesta edição</p>
+      <h2 id="sum-h" class="split">Sumário</h2>
+      <p class="lede reveal" data-d="1" style="margin-top:18px;color:var(--accent2);font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.4vw,36px);line-height:1">A vida depois do descarte</p>
+      <p class="reveal" data-d="2" style="max-width:40ch;font-size:18px;line-height:1.5">Um eletrônico sai das nossas mãos, mas continua passando pelas mãos de outras pessoas. Entre a entrega, o conserto, a desmontagem e a recuperação dos materiais, há caminhos que quase nunca acompanhamos.</p>
+    </div>
+    <ol class="toc span7">
+      <li class="reveal"><a href="#editorial"><span class="n">—</span><span class="t">Editorial</span><span class="p">p. 03</span></a></li>
+      <li class="reveal"><a href="#apresentacao"><span class="n">—</span><span class="t">Apresentação</span><span class="p">p. 04</span></a></li>
+      <li class="reveal"><a href="#cap1"><span class="n">01</span><span class="t">Quando o que funciona começa a parecer velho</span><span class="p">p. 06</span></a></li>
+      <li class="reveal"><a href="#cap2"><span class="n">02</span><span class="t">A gaveta ainda não é o destino</span><span class="p">p. 07</span></a></li>
+      <li class="reveal"><a href="#videos"><span class="n">▶</span><span class="t">Em vídeo: uma bateria no lugar errado</span><span class="p">p. 08</span></a></li>
+      <li class="reveal"><a href="#cap3"><span class="n">03</span><span class="t">A entrega é uma passagem</span><span class="p">p. 09</span></a></li>
+      <li class="reveal"><a href="#cap4"><span class="n">04</span><span class="t">Antes de desmontar, alguém precisa avaliar</span><span class="p">p. 10</span></a></li>
+      <li class="reveal"><a href="#cap5"><span class="n">05</span><span class="t">Voltar a ligar não resolve tudo</span><span class="p">p. 11</span></a></li>
+      <li class="reveal"><a href="#cap6"><span class="n">06</span><span class="t">Quando um aparelho se torna muitas partes</span><span class="p">p. 12</span></a></li>
+      <li class="reveal"><a href="#cap7"><span class="n">07</span><span class="t">O que pode voltar à produção</span><span class="p">p. 13</span></a></li>
+      <li class="reveal"><a href="#cap8"><span class="n">08</span><span class="t">Quem trabalha entre uma vida e outra</span><span class="p">p. 14</span></a></li>
+      <li class="reveal"><a href="#guiyu"><span class="n">●</span><span class="t">Em foco: Guiyu, quem fica com o risco</span><span class="p">p. 15</span></a></li>
+      <li class="reveal"><a href="#cap9"><span class="n">09</span><span class="t">O que sobra também tem destino</span><span class="p">p. 16</span></a></li>
+      <li class="reveal"><a href="#cap10"><span class="n">10</span><span class="t">A responsabilidade continua depois da entrega</span><span class="p">p. 17</span></a></li>
+      <li class="reveal"><a href="#referencias"><span class="n">—</span><span class="t">Referências e bases de consulta</span><span class="p">p. 18</span></a></li>
+    </ol>
+  </div>
+  <span class="folio">OBSOLETA · 05</span>
+</section>
+
+<!-- ============ CAP 1 ============ -->
+<section class="page chapter" id="cap1" aria-labelledby="c1-h">
+  <p class="kicker reveal">Capítulo 01</p>
+  <h2 id="c1-h" class="split">Quando o que funciona começa a parecer velho</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Um celular pode continuar ligando e, ainda assim, deixar de parecer suficiente. A câmera do lançamento promete mais. O design mudou. O modelo que antes despertava interesse agora parece antigo.</p>
+      <p>O sociólogo polonês Zygmunt Bauman analisou como o consumo participa da construção da identidade e das relações sociais. Em <em>Vida para consumo</em>, oferece uma lente para entender uma sociedade em que o desejo precisa ser renovado continuamente. A satisfação com uma compra pode durar menos que o próprio produto: logo aparece outra promessa de novidade.</p>
+      <p>Isso ajuda a explicar a obsolescência percebida, quando o aparelho perde valor aos olhos do usuário mesmo sem perder suas funções. Mas existem outros motivos para uma substituição.</p>
+      <p>A obsolescência programada envolve a limitação deliberada da vida útil. Não basta que um equipamento quebre cedo para provar essa prática: a intenção precisa ser sustentada por evidências.</p>
+      <p>Já a obsolescência tecnológica, que pode envolver software, aparece quando incompatibilidades ou perda de suporte restringem o uso. Um aparelho ainda liga, mas deixa de executar um aplicativo necessário.</p>
+      <p>Esses mecanismos não são sinônimos. Uma troca também pode resultar de bateria desgastada, defeito, conserto caro ou necessidade de trabalho e estudo.</p>
+      <p>O sociólogo francês Pierre Bourdieu investigou como gostos e práticas de consumo se relacionam às condições sociais e às diferenças entre grupos. Sua leitura acrescenta outra dimensão: os bens têm utilidade, mas também participam das relações sociais. Um smartphone pode funcionar como ferramenta e como sinal de gosto, pertencimento ou status.</p>
+      <p>Isso não significa que toda troca seja vaidade. Significa que necessidade, desejo e reconhecimento podem se misturar. Antes de chamar um aparelho de ultrapassado, vale perguntar: o que envelheceu — suas funções, sua compatibilidade ou o significado que atribuímos a ele?</p>
+      <p>Há interesses econômicos nesse movimento. Quando a substituição resulta em uma nova compra, fabricantes e varejistas podem obter receita com a venda. Anunciantes e intermediários também podem ser remunerados por campanhas e transações. Isso descreve possibilidades de receita, não uma medida de lucro nem uma prova de que uma empresa provocou deliberadamente a perda de utilidade de um produto.</p>
+      <p>A leitura de Bauman ajuda a perceber que a pressão pela novidade também alcança a imagem que construímos de nós: consumir pode participar da tentativa de continuar sendo reconhecido. Bourdieu permite perguntar como esse reconhecimento se organiza. Os gostos e os bens que valorizamos se relacionam às condições sociais e podem marcar diferenças entre grupos. Aplicadas ao smartphone, essas ideias ajudam a explicar por que uma marca ou modelo pode prometer pertencimento além de funções. Essa é nossa interpretação do consumo de eletrônicos a partir dos autores, não uma pesquisa deles sobre celulares (Bauman, 2008; Bourdieu, 1979).</p>
+      <p>Os interesses também podem entrar em conflito. Uma assistência independente pode ganhar ao prolongar o uso, enquanto uma venda de substituição deixa de ocorrer. O consumidor pode se beneficiar de uma melhoria necessária, mas assumir uma despesa evitável quando o aparelho anterior ainda o atendia. Para dizer quem lucrou e quanto em um caso específico, seria preciso examinar preços, custos e contratos.</p>
+      <p>As duas leituras se encontram na diferença entre continuar funcionando e continuar sendo desejado. Quando o reconhecimento depende de acompanhar novidades, conservar um aparelho pode deixar de parecer suficiente, mesmo que ele ainda atenda ao uso. Por isso, enfrentar o descarte também exige discutir as condições que estimulam a substituição, junto das possibilidades de reparo e de acesso à tecnologia.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="photo" style="aspect-ratio:16/10"><img src="img/celulares.jpg" alt="Dezenas de celulares antigos amontoados em uma caixa de sucata" loading="lazy"></div>
+      <p class="cap">Celulares antigos em sucata. Foto: MikroLogika / Wikimedia Commons, CC BY-SA 3.0</p>
+      <blockquote class="box olho reveal"><p>Um aparelho pode perder espaço na nossa vida antes de perder a capacidade de funcionar.</p></blockquote>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 06</span>
+</section>
+
+<!-- ============ CAP 2 ============ -->
+<section class="page chapter" id="cap2" aria-labelledby="c2-h">
+  <p class="kicker reveal">Capítulo 02</p>
+  <h2 id="c2-h" class="split">A gaveta ainda não é o destino</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Depois da substituição, o aparelho pode ficar em casa. Guardamos porque talvez alguém precise, porque há arquivos importantes ou porque não sabemos onde entregar.</p>
+      <p>Esse armazenamento é diferente de descarte. Também é diferente de reúso: um equipamento parado ainda não ganhou outro usuário.</p>
+      <p>Na pesquisa de 2023 da Green Eletron, entidade gestora de logística reversa ligada ao setor eletroeletrônico, feita com o instituto Radar Pesquisas, <strong>85%</strong> dos entrevistados afirmaram guardar algum eletrônico sem utilidade em casa. O levantamento usou questionário online e ouviu <strong>2.640</strong> pessoas de 18 a 65 anos, das classes A, B e C, em 21 estados onde a entidade tinha coletores. O resultado descreve respostas nesse universo; não mede o peso armazenado nem significa que <strong>85%</strong> dos aparelhos estejam em gavetas (Green Eletron, pesquisa de 2023, pp. 9 e 15).</p>
+      <p>Em outra pesquisa, de 2025, <strong>43%</strong> das pessoas que guardavam aparelhos disseram não saber como descartá-los corretamente. O percentual se refere a esse grupo, não à população inteira. Como os levantamentos são diferentes, os resultados não devem ser usados sozinhos para afirmar uma evolução entre os anos (Green Eletron, 2025a).</p>
+      <p>Os levantamentos da Green Eletron ajudam a conhecer hábitos declarados, mas não são um censo do descarte. Na divulgação do dado de <strong>43%</strong>, não há detalhamento da amostra desse subgrupo. Isso limita o que podemos afirmar sobre ele (Green Eletron, pesquisa de 2023; 2025a).</p>
+      <p>O desconhecimento relatado indica uma dificuldade de informação entre quem guarda aparelhos. Não demonstra, sozinho, que faltem pontos de coleta ou que eles sejam distantes. A conclusão que tiramos é mais precisa: orientar a entrega faz parte da solução, enquanto as condições de acesso precisam ser verificadas em cada território.</p>
+      <p>Chamamos de resíduos de equipamentos eletroeletrônicos, ou REEE, os equipamentos descartados que dependem de corrente elétrica ou de campos eletromagnéticos para funcionar, incluindo componentes que fazem parte deles no momento do descarte. O termo abrange produtos diferentes, que podem exigir formas distintas de recebimento e tratamento.</p>
+      <p>Um computador, uma geladeira e uma lâmpada não devem ser tratados como se percorressem a mesma rota. Mesmo entre pequenos aparelhos, as condições de recebimento variam.</p>
+      <p>O caminho começa com uma avaliação: o equipamento ainda pode servir a alguém? Precisa de reparo? Há uma organização que possa recebê-lo? Antes de encaminhar, é necessário confirmar quais itens são aceitos e como funciona a entrega.</p>
+      <p>A pergunta “onde descartar?” abre a investigação. A seguinte é: “o que esse lugar faz com o que recebe?”.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box stat reveal">
+        <span class="box-tag">Green Eletron e Radar Pesquisas, 2023</span>
+        <div class="big"><span class="count" data-to="85">85</span><small>%</small></div>
+        <p class="stat-l">dos entrevistados em uma pesquisa online afirmaram guardar algum eletrônico sem utilidade em casa</p>
+        <p class="stat-s">Quem respondeu: 2.640 pessoas de 18 a 65 anos, das classes A, B e C, em 21 estados</p>
+        <div class="dots" aria-hidden="true" data-on="85"></div>
+      </div>
+      <div class="box stat reveal" data-d="1">
+        <span class="box-tag">Green Eletron, 2025a</span>
+        <div class="big"><span class="count" data-to="43">43</span><small>%</small></div>
+        <p class="stat-l">das pessoas que guardavam aparelhos, em outra pesquisa da Green Eletron, disseram não saber como descartá-los corretamente</p>
+        <p class="stat-s">A divulgação não informa quantas pessoas formam esse grupo</p>
+        <div class="dots" aria-hidden="true" data-on="43"></div>
+      </div>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 07</span>
+</section>
+
+<!-- ============ EM VÍDEO ============ -->
+<section class="page" id="videos" aria-labelledby="vid-h">
+  <p class="kicker reveal">Em vídeo</p>
+  <h2 id="vid-h" class="split">Uma bateria no lugar errado</h2>
+  <div class="vplayers">
+    <figure class="box vplayer wide reveal">
+      <span class="box-tag">YouTube · Portland BPS</span>
+      <div class="vwrap" style="aspect-ratio:16/9">
+        <video src="video/incendios-centrais.mp4" poster="img/video-youtube.jpg" muted loop playsinline preload="metadata" controls aria-label="Câmeras de segurança registram incêndios causados por baterias em centrais de resíduos"></video>
+        <button class="vsound" type="button" aria-pressed="false">Ativar som</button>
+      </div>
+      <figcaption>
+        <b>Incêndios em centrais de resíduos</b>
+        <span>Câmeras de segurança registram incêndios e explosões em instalações de lixo e reciclagem. A causa são baterias jogadas no lixo comum, como as de celulares.</span>
+        <i>Portland BPS · “CCTV footage of battery fires and explosions at waste facilities” · imagens da ESA, 2022 · <a href="https://www.youtube.com/watch?v=ZBrOzQRoI-E" target="_blank" rel="noopener">original</a></i>
+      </figcaption>
+    </figure>
+    <figure class="box vplayer tall reveal" data-d="1">
+      <span class="box-tag">Instagram · @mundoconectadobr</span>
+      <div class="vwrap" style="aspect-ratio:9/16">
+        <video src="video/bateria-perfurada.mp4" poster="img/video-instagram.jpg" muted loop playsinline preload="metadata" controls aria-label="Uma bateria de celular é perfurada por uma prensa e pega fogo"></video>
+        <button class="vsound" type="button" aria-pressed="false">Ativar som</button>
+      </div>
+      <figcaption>
+        <b>O que acontece ao furar uma bateria</b>
+        <span>Uma bateria de celular é perfurada e entra em combustão em poucos segundos.</span>
+        <i>@mundoconectadobr · “Incêndio ao perfurar uma bateria de celular” · <a href="https://www.instagram.com/reels/DT_Ppg2lLe7/" target="_blank" rel="noopener">original</a></i>
+      </figcaption>
+    </figure>
+  </div>
+  <span class="folio">OBSOLETA · 08</span>
+</section>
+
+<!-- ============ CAP 3 ============ -->
+<section class="page chapter" id="cap3" aria-labelledby="c3-h">
+  <p class="kicker reveal">Capítulo 03</p>
+  <h2 id="c3-h" class="split">A entrega é uma passagem</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Num sistema organizado, o ponto de recebimento pode ser apenas o primeiro endereço. Os equipamentos precisam ser armazenados e encaminhados para as etapas seguintes.</p>
+      <p>A logística reversa organiza o retorno de produtos e resíduos após o uso. O Decreto federal nº 10.240/2020 regulamenta a logística reversa de eletroeletrônicos domésticos. Para os produtos que ele abrange, há atribuições distribuídas entre fabricantes, importadores, distribuidores, comerciantes e consumidores.</p>
+      <p>A entrega pelo consumidor é uma parte desse sistema. Depois dela, outras organizações assumem atividades de transporte, recebimento e processamento. Não se pode presumir que todas aconteçam no mesmo lugar.</p>
+      <p>Por isso, coleta e reciclagem não são a mesma coisa. Saber que um aparelho foi recebido ainda não informa se voltou ao uso, foi desmontado ou teve materiais recuperados.</p>
+      <p>Segundo o Global E-waste Monitor 2024, o relatório do UNITAR e da UIT citado na apresentação, em 2022, apenas <strong>22,3%</strong> da massa de resíduos eletrônicos gerada no mundo teve coleta e reciclagem formal documentadas. Os outros <strong>77,7%</strong> ficaram fora desse registro; isso não prova que toda essa parcela foi descartada irregularmente. O indicador acompanha massa de resíduos, não a porcentagem de pessoas que diz entregar corretamente (UNITAR/ITU, 2024).</p>
+      <p>No Brasil, o mesmo relatório estimou cerca de <strong>2,4 milhões de toneladas</strong> de resíduos eletrônicos geradas em 2022, o maior volume da América do Sul. O número dimensiona a necessidade de uma estrutura nacional de recebimento e tratamento. Ele mede geração, não coleta: não podemos aplicar a taxa mundial de 22,3% ao país nem concluir, com esse dado, qual parcela brasileira teve destinação adequada (UNITAR/ITU, 2024, p. 70).</p>
+      <p>Acompanhar o percurso exige rastreabilidade: registros que permitam verificar os encaminhamentos e destinos. Para uma reportagem local, isso significa identificar quem recebe os lotes, quais operações realiza e para onde envia cada fração.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="photo" style="aspect-ratio:16/10"><img src="img/coleta-itinerante.jpg" alt="Van com as portas abertas cheia de impressoras, monitores e sacolas de eletrônicos, ao lado de um cartaz que diz Descarte aqui seus eletrônicos" loading="lazy"></div>
+      <p class="cap">Coleta itinerante de eletrônicos em Porto Alegre (RS), 2018: o ponto de entrega é só o começo do percurso. Foto: Divulgação / Prefeitura de Porto Alegre, via Wikimedia Commons</p>
+      <div class="box stat reveal">
+        <span class="box-tag">UNITAR/ITU, 2024</span>
+        <p class="stat-l" style="margin:0 0 10px">Massa de resíduos eletrônicos gerada no mundo em 2022</p>
+        <div class="meter" role="img" aria-label="22,3% com coleta e reciclagem formal documentadas; 77,7% fora desse registro"><i data-w="22.3"></i></div>
+        <div class="meter-l"><span><b>22,3%</b> coleta e reciclagem formal documentadas</span><span><b>77,7%</b> fora desse registro</span></div>
+      </div>
+      <div class="box stat reveal" data-d="1">
+        <span class="box-tag">UNITAR/ITU, 2024, p. 70</span>
+        <div class="big"><span class="count" data-to="2.4" data-dec="1">2,4</span> <small class="unit">milhões de toneladas</small></div>
+        <p class="stat-l">de resíduos eletrônicos gerados no Brasil em 2022, o maior volume da América do Sul</p>
+        <p class="stat-s">Mede geração, não coleta</p>
+      </div>
+      <blockquote class="box olho reveal"><p>O endereço de entrega mostra onde o aparelho sai das nossas mãos. Ainda falta descobrir por quais mãos ele passa depois.</p></blockquote>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 09</span>
+</section>
+
+<!-- ============ CAP 4 ============ -->
+<section class="page chapter" id="cap4" aria-labelledby="c4-h">
+  <p class="kicker reveal">Capítulo 04</p>
+  <h2 id="c4-h" class="split">Antes de desmontar, alguém precisa avaliar</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">A triagem organiza os equipamentos recebidos e ajuda a definir seus próximos caminhos. As condições do aparelho, as possibilidades técnicas e a estrutura da organização influenciam essa decisão.</p>
+      <p>É aqui que conceitos frequentemente confundidos começam a se separar.</p>
+      <p><span class="def" data-t="reuso">O reúso mantém o produto ou um componente em utilização, sem transformá-lo em matéria-prima.</span> <span class="def" data-t="reparo">O reparo busca corrigir um defeito.</span> <span class="def" data-t="recond">O recondicionamento envolve avaliação e intervenções para preparar um equipamento usado para voltar a funcionar adequadamente.</span></p>
+      <p><span class="def" data-t="recic">Já a reciclagem transforma materiais de resíduos para que possam ser utilizados novamente.</span> Um computador recuperado para uma biblioteca percorreu uma trajetória diferente daquela de uma carcaça processada para recuperação de metal.</p>
+      <p>O Programa Computadores para Inclusão, do Ministério das Comunicações, é uma iniciativa do governo federal voltada à inclusão digital. Nele, os Centros de Recondicionamento de Computadores recebem equipamentos de informática e realizam atividades como testes, preparação e recuperação. O programa prevê também o encaminhamento das partes sem aproveitamento para destinação adequada.</p>
+      <p>Esses centros são um exemplo de caminho possível. Não representam o destino de todo eletrônico entregue para coleta.</p>
+      <p>Segundo balanço divulgado pelo Ministério das Comunicações em 2025 e atualizado em junho daquele ano, esse programa havia acumulado, desde o início de sua atuação, mais de <strong>9,2 mil toneladas</strong> de eletroeletrônicos com tratamento adequado. O número soma toda a atuação do programa até então: não são <strong>9,2 mil toneladas</strong> de computadores doados, nem o total tratado no país naquele ano (Ministério das Comunicações, 2025).</p>
+      <p>Esse resultado documenta a atuação de uma iniciativa brasileira e mostra um caminho que já existe. Mas o volume tratado não informa, sozinho, quantos computadores voltaram ao uso nem por quanto tempo atenderam a quem os recebeu. Para avaliar a inclusão digital, precisamos acompanhar também o funcionamento após a entrega. É essa diferença entre tratar resíduos e garantir acesso que orienta nossa proposta para o recondicionamento.</p>
+      <p>O benefício dessa rota pode chegar a quem recebe um equipamento em condições de uso e a quem se forma para realizar o trabalho. Assistências e empresas de recondicionamento também podem obter receita por serviços e vendas. Benefício social e resultado comercial podem coexistir; devem ser avaliados pelas condições do equipamento entregue, do acesso e do trabalho.</p>
+      <p>A segunda vida depende de avaliação e trabalho. Entre um equipamento recebido e outro pronto para uso, existem decisões sobre funcionamento, desempenho e condições de atendimento ao próximo usuário.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box terms reveal" role="list" aria-label="Conceitos do capítulo">
+        <span class="box-tag">Quatro caminhos diferentes</span>
+        <div class="term" role="listitem" data-t="reuso" tabindex="0"><b>Reúso</b><span>O produto ou um componente continua em uso, sem virar matéria-prima.</span></div>
+        <div class="term" role="listitem" data-t="reparo" tabindex="0"><b>Reparo</b><span>Corrige um defeito.</span></div>
+        <div class="term" role="listitem" data-t="recond" tabindex="0"><b>Recondicionamento</b><span>Avaliação e intervenções para que um equipamento usado volte a funcionar adequadamente.</span></div>
+        <div class="term" role="listitem" data-t="recic" tabindex="0"><b>Reciclagem</b><span>Transforma materiais de resíduos para que possam ser utilizados novamente.</span></div>
+      </div>
+      <div class="box stat reveal" data-d="1">
+        <span class="box-tag">Ministério das Comunicações, 2025</span>
+        <div class="big"><span class="count" data-to="9.2" data-dec="1">9,2</span> <small class="unit">mil toneladas</small></div>
+        <p class="stat-l">de eletroeletrônicos com tratamento adequado ao longo da atuação do Programa Computadores para Inclusão</p>
+      </div>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 10</span>
+</section>
+
+<!-- ============ CAP 5 ============ -->
+<section class="page chapter" id="cap5" aria-labelledby="c5-h">
+  <p class="kicker reveal">Capítulo 05</p>
+  <h2 id="c5-h" class="split">Voltar a ligar não resolve tudo</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Um computador recuperado precisa conseguir realizar as tarefas para as quais será destinado. Inclusão digital exige condições de uso, manutenção e acesso aos programas necessários.</p>
+      <p>É nesse ponto que hardware e software se encontram novamente. Um equipamento pode estar fisicamente conservado e enfrentar limitações de compatibilidade. Por outro lado, escolhas de desenvolvimento podem permitir que determinadas tarefas continuem acessíveis em máquinas com menos recursos.</p>
+      <p>Requisitos mínimos, consumo de memória e compatibilidade influenciam quem consegue usar um sistema. Prolongar o uso também exige considerar atualizações de segurança e as necessidades reais de cada pessoa.</p>
+      <p>Bourdieu ajuda a perceber que o valor atribuído a um objeto também depende das relações sociais em que ele circula. Os gostos não se formam isoladamente: se relacionam às condições de vida e às diferenças entre grupos. Aplicada ao equipamento usado, essa leitura permite separar a perda de prestígio da perda de utilidade, sem presumir que todas as pessoas valorizem o novo da mesma forma (Bourdieu, 1979).</p>
+      <p>Essa diferença importa para a inclusão digital. Se quem recebe um computador recondicionado precisa aceitar limitações que impedem estudar ou trabalhar, a entrega mantém uma desigualdade de acesso. Por isso, defendemos que a avaliação considere as tarefas do próximo usuário e as condições de manutenção. O equipamento usado precisa ampliar possibilidades reais, não apenas mudar de endereço.</p>
+      <p>Isso não justifica oferecer equipamentos inadequados a quem tem menos renda. O objetivo deve ser ampliar o acesso com qualidade. Doar algo sem condições de uso apenas transfere a dificuldade para outra pessoa.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="photo" style="aspect-ratio:16/10"><img src="img/monitores-recondicionados.jpg" alt="Prateleiras com seis monitores de tubo usados, todos ligados, à venda em uma loja" loading="lazy"></div>
+      <p class="cap">Monitores recondicionados à venda em Charlotte, EUA. Foto: Ms angie gray / Wikimedia Commons, CC BY-SA 4.0</p>
+      <blockquote class="box olho reveal"><p>Uma segunda vida precisa funcionar para quem recebe o aparelho.</p></blockquote>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 11</span>
+</section>
+
+<!-- ============ CAP 6 ============ -->
+<section class="page chapter" id="cap6" aria-labelledby="c6-h">
+  <p class="kicker reveal">Capítulo 06</p>
+  <h2 id="c6-h" class="split">Quando um aparelho se torna muitas partes</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Nem todo equipamento pode voltar ao uso inteiro. Em alguns casos, componentes aproveitáveis podem servir à recuperação de outras unidades. As demais partes seguem caminhos de separação e tratamento.</p>
+      <p>Na desmontagem, o aparelho deixa de circular como um objeto único. Placas, cabos, carcaças e outros componentes passam a exigir encaminhamentos diferentes.</p>
+      <p>Essa etapa não equivale à reciclagem completa. Separar uma placa ainda não significa recuperar os metais presentes nela. Entre a desmontagem e a obtenção de materiais utilizáveis existem outras operações.</p>
+      <p>O processamento pode envolver separação física e tratamentos industriais, conforme as características do material e a tecnologia utilizada. Essas atividades exigem instalações e controles apropriados.</p>
+      <p>Também não existe garantia de recuperação total. A mistura de materiais, o projeto do produto, a infraestrutura disponível e os custos interferem no que pode ser aproveitado.</p>
+      <p>Dizer que um eletrônico “foi reciclado” pode esconder uma cadeia extensa. Uma descrição mais clara identifica quais materiais foram separados, quem os recebeu e quais resultados foram obtidos.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="photo" style="aspect-ratio:16/10"><img src="img/separacao-placa.jpg" alt="Vitrine de museu mostrando uma placa de circuito inteira, depois triturada e depois separada em potes por tipo de material" loading="lazy"></div>
+      <p class="cap">Exposição sobre a separação de uma placa de circuito: inteira, triturada e separada por tipo de material. Science Square Tsukuba, Japão. Foto: Syced / Wikimedia Commons, CC0</p>
+    </aside>
+  </div>
+  <div class="box parts reveal" style="margin-top:28px">
+    <h3>Nem toda peça segue a mesma rota</h3>
+    <div class="parts-grid">
+      <div class="part"><b>Placas eletrônicas:</b><p>reúnem materiais e componentes diferentes. Sua separação é uma etapa anterior à recuperação dos materiais.</p></div>
+      <div class="part"><b>Cabos e carcaças:</b><p>podem seguir para processamento conforme sua composição e as condições de recebimento.</p></div>
+      <div class="part"><b>Baterias e telas:</b><p>variam em composição e tecnologia. Exigem avaliação e encaminhamento próprios.</p></div>
+    </div>
+    <p class="parts-note">Esse percurso deve ser confirmado com o operador responsável. Uma rota possível não é um destino garantido.</p>
+  </div>
+  <span class="folio">OBSOLETA · 12</span>
+</section>
+
+<!-- ============ CAP 7 ============ -->
+<section class="page chapter" id="cap7" aria-labelledby="c7-h">
+  <p class="kicker reveal">Capítulo 07</p>
+  <h2 id="c7-h" class="split">O que pode voltar à produção</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">A recuperação de materiais busca aproveitar frações que possam retornar a atividades produtivas. Mas a existência de material valioso dentro de um aparelho não garante sua recuperação.</p>
+      <p>É preciso separar, transportar e processar. O valor potencial dos materiais convive com custos e dificuldades para obtê-los.</p>
+      <p>O Global E-waste Monitor 2024 estimou em <strong>US$ 91 bilhões</strong> o valor dos metais contidos nos resíduos eletrônicos gerados mundialmente em 2022. O valor dos metais recuperados foi estimado em <strong>US$ 28 bilhões</strong>. Esses montantes não são lucro das recicladoras nem pagamento aos catadores: representam valores de materiais em escalas distintas da cadeia (UNITAR/ITU, 2024).</p>
+      <p>Quem pode obter receita depois do descarte? Operadores de coleta e tratamento podem receber por serviços; comerciantes podem negociar equipamentos e peças; recicladores e refinadores podem vender materiais recuperados. As indústrias compradoras obtêm uma fonte de insumos. A remuneração e a margem dependem dos custos, da qualidade dos materiais e dos contratos de cada operação.</p>
+      <p>Isso ajuda a entender por que um resíduo ainda circula depois de perder utilidade para o antigo dono. Mas também mostra por que recolher só o que tem preço de venda não basta: a cadeia precisa financiar o transporte, o processamento e o cuidado com as frações sem retorno comercial.</p>
+      <p>Também seria precipitado afirmar que um celular descartado se transforma em outro celular. Os materiais recuperados podem abastecer outras cadeias. Para indicar um produto final específico, precisamos comprovar o caminho.</p>
+      <p>A economia circular propõe manter produtos e materiais em uso por mais tempo. Isso inclui durabilidade, manutenção, reparo, reúso e recuperação. A reciclagem participa desse conjunto, mas não substitui as etapas anteriores.</p>
+      <p>Quando um produto é difícil de abrir, reparar ou separar, suas escolhas de projeto reaparecem depois do descarte. Quando o consumo continua acelerando, a recuperação de materiais precisa enfrentar um volume crescente.</p>
+      <p>Bauman ajuda a conectar as duas pontas: a renovação permanente do desejo pressiona a substituição, enquanto as etapas posteriores precisam lidar com aquilo que sai de circulação.</p>
+      <p>A circularidade deve ser examinada pelos resultados: quanto voltou ao uso, o que foi recuperado e o que permaneceu sem aproveitamento?</p>
+      <p>A projeção do Global E-waste Monitor 2024 era de <strong>82 milhões de toneladas</strong> de resíduos eletrônicos geradas em 2030, frente a 62 milhões em 2022. É uma projeção, não uma medição de 2030; mostra por que ampliar a recuperação precisa ser acompanhado por medidas que prolonguem a vida dos produtos (UNITAR/ITU, 2024).</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box chart-box reveal">
+        <span class="box-tag">UNITAR/ITU, 2024</span>
+        <h4>Valor dos metais em 2022, em US$ bilhões</h4>
+        <svg class="chart" viewBox="0 0 460 150" role="img" aria-label="Metais contidos: US$ 91 bilhões; metais recuperados: US$ 28 bilhões">
+          <g class="m" data-tip="US$ 91 bilhões: valor dos metais contidos nos resíduos eletrônicos gerados em 2022">
+            <text x="0" y="20">Metais contidos</text>
+            <path class="bar1 gx" d="M0 30 H436 a4 4 0 0 1 4 4 V62 a4 4 0 0 1 -4 4 H0 Z"/>
+            <text class="lbl" x="430" y="54" text-anchor="end" style="fill:var(--on-accent);font-weight:600">91</text>
+            <rect class="hit" x="0" y="0" width="460" height="70"/>
+          </g>
+          <g class="m" data-tip="US$ 28 bilhões: valor dos metais recuperados em 2022">
+            <text x="0" y="96">Metais recuperados</text>
+            <path class="bar2 gx" d="M0 106 H131 a4 4 0 0 1 4 4 V138 a4 4 0 0 1 -4 4 H0 Z"/>
+            <text class="lbl" x="145" y="130" style="font-weight:600">28</text>
+            <rect class="hit" x="0" y="76" width="460" height="70"/>
+          </g>
+        </svg>
+      </div>
+      <div class="box chart-box reveal" data-d="1">
+        <span class="box-tag">UNITAR/ITU, 2024</span>
+        <h4>Resíduos eletrônicos gerados, em milhões de toneladas</h4>
+        <svg class="chart" viewBox="0 0 460 210" role="img" aria-label="62 milhões de toneladas em 2022; projeção de 82 milhões em 2030">
+          <line class="grid" x1="0" y1="180" x2="460" y2="180"/>
+          <g class="m" data-tip="2022: 62 milhões de toneladas">
+            <path class="bar1 gy" d="M40 180 V77 a4 4 0 0 1 4 -4 H176 a4 4 0 0 1 4 4 V180 Z"/>
+            <text class="lbl" x="110" y="62" text-anchor="middle" style="font-weight:600">62</text>
+            <text x="110" y="200" text-anchor="middle">2022</text>
+            <rect class="hit" x="30" y="40" width="160" height="170"/>
+          </g>
+          <g class="m" data-tip="2030: projeção de 82 milhões de toneladas">
+            <path class="bar0 gy proj" d="M260 180 V44 a4 4 0 0 1 4 -4 H396 a4 4 0 0 1 4 4 V180 Z"/>
+            <text class="lbl" x="330" y="30" text-anchor="middle" style="font-weight:600">82</text>
+            <text x="330" y="200" text-anchor="middle">2030 (projeção)</text>
+            <rect class="hit" x="250" y="10" width="160" height="200"/>
+          </g>
+        </svg>
+      </div>
+      <div class="photo" style="aspect-ratio:16/10"><img src="img/placa-triturada.jpg" alt="Fragmentos de placa de circuito triturada, com pedaços de chips, conectores e fios" loading="lazy"></div>
+      <p class="cap">Placa de circuito triturada, etapa anterior à separação dos materiais. Science Square Tsukuba, Japão. Foto: Syced / Wikimedia Commons, CC0</p>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 13</span>
+</section>
+
+<!-- ============ CAP 8 ============ -->
+<section class="page chapter" id="cap8" aria-labelledby="c8-h" style="padding-top:0">
+  <div class="photo bleed" style="aspect-ratio:21/9"><img src="img/trabalhadores.jpg" data-parallax alt="Dois jovens com um carrinho de mão cheio de fios de cobre em um terreno coberto de fumaça" style="object-position:center 40%" loading="lazy"></div>
+  <p class="cap">Trabalhadores do lixo eletrônico em Agbogbloshie, Gana. Foto: Jcaravanos / Wikimedia Commons, CC BY-SA 4.0</p>
+  <p class="kicker reveal" style="margin-top:24px">Capítulo 08</p>
+  <h2 id="c8-h" class="split">Quem trabalha entre uma vida e outra</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Depois da entrega, o aparelho não se move sozinho. Pessoas recebem, transportam, testam, consertam, desmontam e separam.</p>
+      <p>Essas atividades exigem conhecimento, tempo, equipamentos e condições seguras. Cooperativas, assistências, centros de recondicionamento e indústrias podem participar da cadeia em funções diferentes. Suas condições de trabalho também não são iguais.</p>
+      <p>O preço de um lote de material não representa automaticamente uma remuneração suficiente para quem o coletou e preparou. O valor econômico depende de como a cadeia está organizada e de quem consegue negociar em cada etapa.</p>
+      <p>A diferença de poder aparece nas decisões que cada participante pode tomar. Uma empresa que define o projeto de um aparelho influencia seu reparo; quem recebe a sucata trabalha com escolhas já feitas. Se um contrato paga apenas pelo material vendido, o cuidado com as frações sem valor comercial precisa encontrar outra forma de financiamento. A análise da cadeia deve examinar essas condições, em vez de atribuir a todos a mesma capacidade de decidir.</p>
+      <p>O Global E-waste Monitor 2024 estimou em <strong>US$ 78 bilhões</strong> os custos globais de 2022 transferidos à população e ao ambiente pela gestão dos resíduos eletrônicos, incluindo efeitos de substâncias tóxicas, plásticos e aquecimento global. Trata-se de uma avaliação monetária de danos, não de uma conta diretamente cobrada às famílias. Ela mostra por que valor recuperado e benefício coletivo não são equivalentes (UNITAR/ITU, 2024).</p>
+      <p>A reputação também pode beneficiar marcas. Na pesquisa online de 2025 da Green Eletron com a Radar Pesquisas, <strong>85%</strong> dos <strong>2.890</strong> entrevistados disseram valorizar iniciativas de logística reversa. Foram ouvidas pessoas de 18 a 65 anos das classes A, B e C. O resultado indica reconhecimento declarado nesse universo, não comprova aumento de vendas nem representa automaticamente todos os brasileiros (Green Eletron, 2025b).</p>
+      <p>Pela perspectiva da justiça ambiental, recuperar valor econômico só pode ser avaliado junto da distribuição dos riscos e dos benefícios. Os custos estimados pelo relatório mostram que a recuperação de materiais pode coexistir com danos que não aparecem no preço de venda. Nossa conclusão é que o resultado da cadeia precisa incluir a proteção das pessoas e do ambiente, além do valor recuperado.</p>
+      <p>Guiyu, na China, ajuda a examinar essa separação. Em estudo publicado em 2007, pesquisadores da Faculdade de Medicina da Universidade de Shantou, na China, liderados por Xia Huo, compararam <strong>165 crianças</strong> de Guiyu com 61 de Chendian e encontraram níveis médios de chumbo no sangue mais altos no primeiro grupo. O estudo apontou que as atividades rudimentares de reciclagem poderiam contribuir para essa exposição. É uma evidência localizada e histórica, não uma descrição atual de Guiyu nem de trabalhadores brasileiros (Huo et al., 2007).</p>
+      <p>Em relato de campo sobre uma visita em 2018, publicado em 2019, o pesquisador Davor Mujezinovic, da Universidade de Lancaster (Reino Unido), descreveu a mudança de oficinas para um parque industrial e a permanência de dificuldades nas condições de trabalho. Segundo o autor, os proprietários eram principalmente moradores locais, enquanto os trabalhadores eram migrantes, e havia uma grande diferença de renda entre eles. O relato também descreve proprietários que acompanhavam o trabalho a distância, enquanto os trabalhadores permaneciam nas áreas de processamento. Isso ajuda a perceber uma desigualdade concreta: quem controla a atividade e recebe seus benefícios pode ter mais condições de se afastar da exposição do que quem executa as tarefas. As fontes tratam de momentos e métodos diferentes. Juntas, mostram por que mudar o endereço do processamento não basta para comprovar proteção: é preciso verificar como o trabalho acontece (Mujezinovic, 2019).</p>
+      <p>Esse caso não representa toda reciclagem. Ele sustenta um critério para acompanhar outras experiências: conhecer o destino do material exige conhecer também as condições de quem o processa. No Brasil, essa verificação precisa de evidências próprias; o exemplo chinês não permite presumir as mesmas condições aqui.</p>
+      <p class="see-guiyu"><a href="#guiyu">A história completa de Guiyu está nas próximas páginas ↓</a></p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box stat reveal">
+        <span class="box-tag">UNITAR/ITU, 2024</span>
+        <div class="big">US$ <span class="count" data-to="78">78</span> <small>bi</small></div>
+        <p class="stat-l">custos globais de 2022 transferidos à população e ao ambiente pela gestão dos resíduos eletrônicos</p>
+      </div>
+      <div class="box stat reveal" data-d="1">
+        <span class="box-tag">Green Eletron, 2025b</span>
+        <div class="big"><span class="count" data-to="85">85</span><small>%</small></div>
+        <p class="stat-l">dos 2.890 entrevistados disseram valorizar iniciativas de logística reversa</p>
+      </div>
+      <div class="box stat reveal" data-d="2">
+        <span class="box-tag">Huo et al., 2007</span>
+        <div class="vs"><div><b class="big"><span class="count" data-to="165">165</span></b><span>crianças de Guiyu</span></div><i aria-hidden="true">×</i><div><b class="big b2"><span class="count" data-to="61">61</span></b><span>de Chendian</span></div></div>
+        <p class="stat-l">níveis médios de chumbo no sangue mais altos no primeiro grupo</p>
+        <p class="stat-s">Evidência localizada e histórica</p>
+      </div>
+      <div class="photo" style="aspect-ratio:3/2"><img src="img/china-crt.jpg" alt="Vista de cima de um caminhão sendo carregado com dezenas de televisores de tubo velhos" loading="lazy"></div>
+      <p class="cap">Televisores de tubo carregados em um caminhão para reciclagem em Shenzhen, na mesma província de Guiyu (Guangdong, China). Foto: Chris / Flickr via Wikimedia Commons, CC BY-SA 2.0</p>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 14</span>
+</section>
+
+<!-- ============ EM FOCO: GUIYU ============ -->
+<section class="page chapter guiyu" id="guiyu" aria-labelledby="gy-h">
+  <p class="kicker reveal">Em foco · Guiyu, China</p>
+  <h2 id="gy-h" class="split">Quem fica com o risco</h2>
+  <p class="gy-lede reveal">Durante cerca de duas décadas, uma cidade do sul da China desmontou eletrônicos descartados por outros países. O caso mostra, em escala extrema, o que acontece quando o valor dos materiais é recuperado e o risco fica com quem trabalha e mora perto.</p>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Guiyu fica na província de Guangdong, no sul da China. Segundo a Basel Action Network (BAN), organização que monitora o comércio internacional de resíduos tóxicos, o lugar começou a mudar em 1995: deixou de ser uma comunidade rural e pobre, que vivia do arroz, e virou um grande centro de processamento de lixo eletrônico.</p>
+      <p>Em dezembro de 2001, investigadores da BAN e da Silicon Valley Toxics Coalition percorreram a cidade. O relatório publicado em 2002, <em>Exporting Harm</em> (“Exportando danos”), descreveu equipamentos importados sendo desmontados em centenas de pequenas oficinas e quintais, e apontou os Estados Unidos como uma das origens desse material (BAN; SVTC, 2002).</p>
+      <h3 class="gy-h3">Quem fazia o trabalho</h3>
+      <p>A maior parte da mão de obra não era de Guiyu. Segundo o relatório, vinha de regiões agrícolas de outras províncias, como Hunan e Anhui, e recebia em média o equivalente a <strong>US$ 1,50 por dia</strong>. Muitas trabalhadoras eram mulheres, e havia crianças. A imprensa chinesa estimava 100 mil pessoas no setor, número que os próprios autores consideravam difícil de confirmar.</p>
+      <p>Os métodos eram rudimentares: fios queimados a céu aberto para recuperar o cobre, placas aquecidas para soltar componentes e banhos de ácido para extrair ouro de chips. Os restos eram despejados em margens de rios, campos e canais de irrigação (BAN; SVTC, 2002).</p>
+      <h3 class="gy-h3">O que ficou no lugar</h3>
+      <p>O relatório afirma que, por causa da poluição do lençol freático, a água potável precisava chegar de caminhão de uma cidade a 30 quilômetros. Uma amostra colhida em 2001 no rio Lianjiang, junto a um ponto onde placas haviam sido queimadas e tratadas com ácido, tinha chumbo <strong>190 vezes</strong> acima do limite da Organização Mundial da Saúde para água potável. É uma amostra pontual, não uma medição de todo o rio, mas indica o tipo de risco que permanecia na cidade (BAN; SVTC, 2002).</p>
+      <p>O risco chegou às crianças. No estudo de 2007 citado no capítulo anterior, <strong>81,8%</strong> das crianças de Guiyu com menos de 6 anos (135 de 165) tinham mais de 10 microgramas de chumbo por decilitro de sangue, o nível usado pelos autores como referência. Em Chendian, cidade usada como comparação, eram <strong>37,7%</strong> (23 de 61) (Huo et al., 2007).</p>
+      <h3 class="gy-h3">Mudar de endereço resolve?</h3>
+      <p>Em 2013, o governo local aprovou um parque industrial para concentrar a reciclagem. Em dezembro de 2015, as oficinas tinham de se mudar para lá, sob ameaça de multa e corte de energia (BAN, 2015). Segundo Mujezinovic, a cidade chegou a ter mais de 5 mil pequenas oficinas, muitas familiares; só cerca de um quarto entrou no parque, e as demais fecharam, em parte porque o aluguel era caro demais.</p>
+      <p>Na visita de 2018, ele encontrou um centro urbano limpo, mas um parque com ventilação ruim e cheiro forte de produtos químicos. Para o pesquisador, os trabalhadores continuavam expostos, ainda que menos que antes, e tinham ficado mais pobres, enquanto empresários locais lucravam (Mujezinovic, 2019).</p>
+      <p>Guiyu não descreve o Brasil nem a reciclagem de hoje. Mas deixa uma pergunta para toda esta edição: quando o lixo eletrônico vai para onde o trabalho é mais barato e a fiscalização é mais fraca, quem fica com o risco raramente é quem ficou com o aparelho novo.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box stat reveal">
+        <span class="box-tag">Huo et al., 2007</span>
+        <p class="stat-l" style="margin:0 0 14px">Crianças com menos de 6 anos com mais de 10 µg/dL de chumbo no sangue</p>
+        <div class="vs"><div><b class="big"><span class="count" data-to="81.8" data-dec="1">81,8</span><small>%</small></b><span>em Guiyu</span></div><i aria-hidden="true">×</i><div><b class="big b2"><span class="count" data-to="37.7" data-dec="1">37,7</span><small>%</small></b><span>em Chendian</span></div></div>
+      </div>
+      <div class="box stat reveal" data-d="1">
+        <span class="box-tag">BAN; SVTC, 2002</span>
+        <div class="big"><span class="count" data-to="190">190</span><small>×</small></div>
+        <p class="stat-l">o limite da OMS para chumbo na água potável, em amostra do rio Lianjiang (2001)</p>
+        <hr>
+        <div class="big b2">US$ 1,50</div>
+        <p class="stat-l">salário médio diário de quem desmontava o lixo eletrônico</p>
+      </div>
+      <ol class="box timeline reveal" data-d="2" aria-label="Linha do tempo de Guiyu">
+        <li><b>1995</b><span>Começa a virar centro de lixo eletrônico</span></li>
+        <li><b>2001</b><span>Investigação da BAN na cidade</span></li>
+        <li><b>2002</b><span>Relatório <em>Exporting Harm</em></span></li>
+        <li><b>2007</b><span>Estudo mede chumbo no sangue das crianças</span></li>
+        <li><b>2013</b><span>Aprovado o parque industrial</span></li>
+        <li><b>2015</b><span>Oficinas obrigadas a se mudar</span></li>
+        <li><b>2018</b><span>Visita de Mujezinovic</span></li>
+      </ol>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 15</span>
+</section>
+
+<!-- ============ CAP 9 ============ -->
+<section class="page chapter" id="cap9" aria-labelledby="c9-h">
+  <p class="kicker reveal">Capítulo 09</p>
+  <h2 id="c9-h" class="split">O que sobra também tem destino</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">Nem tudo volta ao uso ou à produção.</p>
+      <p>A Política Nacional de Resíduos Sólidos (Lei nº 12.305/2010), lei federal que organiza a gestão de resíduos no país, diferencia resíduos e rejeitos. Rejeitos são os resíduos para os quais foram esgotadas as possibilidades de tratamento e recuperação por processos tecnológicos disponíveis e economicamente viáveis. Eles exigem disposição final ambientalmente adequada.</p>
+      <p>A distinção importa porque “sem utilidade para o antigo dono” não significa “sem possibilidade de aproveitamento”. Ao mesmo tempo, chamar algo de reciclável não garante que existam condições reais para reciclá-lo.</p>
+      <p>Também há diferença entre destinação, que abrange caminhos como reutilização, reciclagem e tratamento, e disposição final, relacionada à colocação ordenada de rejeitos em aterros conforme as exigências aplicáveis.</p>
+      <p>Uma cadeia responsável precisa explicar o que aconteceu com suas sobras. Quanto não foi recuperado? Que tratamento recebeu? Para onde foi encaminhado?</p>
+      <p>A perda de registros impede conhecer o destino. Não prova, sozinha, qual dano ocorreu, mas limita a verificação dos resultados.</p>
+    </div>
+    <aside class="span5 aside">
+      <blockquote class="box olho big-olho reveal"><p>O que não tem valor de venda continua exigindo cuidado.</p></blockquote>
+    </aside>
+  </div>
+  <span class="folio">OBSOLETA · 16</span>
+</section>
+
+<!-- ============ CAP 10 ============ -->
+<section class="page chapter" id="cap10" aria-labelledby="c10-h">
+  <p class="kicker reveal">Capítulo 10</p>
+  <h2 id="c10-h" class="split">A responsabilidade continua depois da entrega</h2>
+  <div class="cols" style="margin-top:24px">
+    <div class="span7 body reveal">
+      <p class="drop">O percurso do aparelho mostra por que o descarte não pode ser explicado apenas pela decisão de quem o entrega. Ele começa nas condições que estimulam a substituição e passa pelas possibilidades de prolongar o uso e pela estrutura de tratamento. A responsabilidade envolve diferentes participantes, mas eles não têm o mesmo poder de decisão. Nossa proposta é agir sobre essas diferenças, acompanhando o que acontece com o equipamento e com as pessoas ao longo do caminho.</p>
+      <p>Fabricantes influenciam projeto, durabilidade e possibilidades de reparo. Os sistemas de recebimento e processamento organizam etapas do retorno. O poder público estabelece regras e fiscaliza. Consumidores participam das decisões de uso e encaminhamento.</p>
+      <p>A coleta depende da articulação dessas tarefas. A disposição de entregar não substitui a existência de uma estrutura acessível; a existência de um ponto de recebimento não dispensa o acompanhamento do destino.</p>
+    </div>
+    <aside class="span5 aside">
+      <div class="box devbox reveal" id="devbox">
+        <p data-type>Para quem desenvolve tecnologia, a responsabilidade também aparece antes da compra.</p>
+        <p data-type>Um programa exige recursos necessários às suas funções?</p>
+        <p data-type>Há decisões que excluem equipamentos ainda capazes de atender ao usuário?</p>
+        <p data-type>Como desempenho e segurança são considerados ao longo do suporte?</p>
+      </div>
+    </aside>
+  </div>
+
+  <p class="frentes-intro reveal">A partir dessa leitura, propomos três frentes de melhoria. Elas se apoiam em caminhos já existentes, mas acrescentam prioridades e formas de acompanhamento defendidas pelo grupo. Não são resultados alcançados nem novas obrigações legais.</p>
+  <div class="frentes">
+    <article class="box frente reveal">
+      <span class="frente-n" aria-hidden="true">1</span>
+      <h3>Facilitar a entrega e acompanhar o destino</h3>
+      <p>Propomos que empresas e entidades responsáveis pelos sistemas de logística reversa, em articulação com o poder público local, mantenham informações acessíveis sobre pontos de recebimento, horários e itens aceitos. O planejamento deve verificar onde o atendimento é insuficiente e prever recursos para transporte e tratamento. O dado sobre desconhecimento do descarte justifica melhorar a orientação; a necessidade de novos pontos depende de diagnóstico local.</p>
+      <p>O Decreto nº 10.240/2020 já prevê comunicação e relatórios de desempenho. Nossa proposta é tornar essas informações compreensíveis para o leitor: onde entregar, quanto foi recebido e quais destinos foram documentados. O acompanhamento deve distinguir recebimento, reúso, recuperação de materiais e rejeitos, sem contar tudo como reciclagem. A ampliação precisa de financiamento definido e fiscalização; divulgar um endereço não garante que o serviço funcione (Brasil, 2020).</p>
+    </article>
+    <article class="box frente reveal" data-d="1">
+      <span class="frente-n" aria-hidden="true">2</span>
+      <h3>Recondicionar com qualidade e manutenção</h3>
+      <p>Propomos ampliar parcerias entre poder público, instituições de ensino e centros de recondicionamento para recuperar equipamentos e formar pessoas para esse trabalho. O Programa Computadores para Inclusão oferece uma base concreta: prevê testes, recondicionamento e destinação das partes sem aproveitamento. A ampliação deve reservar recursos para manutenção e adequar os computadores às tarefas das instituições que os receberão (Ministério das Comunicações, Anexo V).</p>
+      <p>Além de contar doações, propomos registrar quantos equipamentos continuam funcionando seis meses após a entrega, quais tarefas conseguem atender e quais reparos foram necessários. Esse prazo é uma sugestão do grupo para acompanhamento, não uma meta oficial. Peças, equipe técnica e manutenção têm custo; a parceria precisa prever quem responde por eles para que a segunda vida dure.</p>
+    </article>
+    <article class="box frente reveal" data-d="2">
+      <span class="frente-n" aria-hidden="true">3</span>
+      <h3>Favorecer o reparo e a permanência em uso</h3>
+      <p>Propomos que fabricantes facilitem o acesso a peças, documentação técnica e informações claras sobre a duração do suporte. Desenvolvedores devem avaliar requisitos de desempenho e compatibilidade para evitar exigências desnecessárias às funções do programa. Como política pública, defendemos que compras de equipamentos por órgãos públicos considerem reparabilidade e duração do suporte entre seus critérios, com avaliação técnica e das regras aplicáveis.</p>
+      <p>Essas medidas podem ser acompanhadas pela disponibilidade e pelo custo do reparo e pelo período de suporte informado. Prolongar o uso exige considerar segurança, desempenho e a necessidade de cada usuário. A prioridade de reduzir e reutilizar antes de reciclar já está na Política Nacional de Resíduos Sólidos; as ações específicas acima são propostas do grupo para aproximar essa orientação do cotidiano dos eletrônicos (Brasil, 2010, art. 9º).</p>
+    </article>
+  </div>
+
+  <div class="fecho body reveal">
+    <p>Voltemos ao aparelho do começo. Ele pode continuar funcionando em outro lugar, fornecer componentes ou seguir para recuperação de materiais. Também pode deixar sobras que exigem destinação específica.</p>
+    <p>A vida depois do descarte é feita dessas transformações e do trabalho de quem as realiza. Conhecê-la significa continuar perguntando pelo aparelho quando ele já não está diante de nós.</p>
+    <p>Ao longo desse caminho, os ganhos mudam de forma: receita de uma nova venda, remuneração por reparo, acesso a um computador recuperado ou valor de uma matéria-prima secundária. Eles não são distribuídos automaticamente a quem realiza o trabalho ou convive com os riscos. Acompanhar o aparelho é também acompanhar como esses benefícios e custos são repartidos.</p>
+  </div>
+  <span class="folio">OBSOLETA · 17</span>
+</section>
+
+<!-- ============ REFERÊNCIAS ============ -->
+<section class="page" id="referencias" aria-labelledby="ref-h">
+  <p class="kicker reveal">Fontes</p>
+  <h2 id="ref-h" class="split">Referências e bases de consulta</h2>
+  <div class="refs reveal" style="margin-top:32px">
+    <p>BAUMAN, Zygmunt. <em>Vida para consumo: a transformação das pessoas em mercadorias</em>. Rio de Janeiro: Jorge Zahar Ed., 2008. <a href="https://www.companhiadasletras.com.br/9786559790647-vida-para-consumo--nova-edicao-/p" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BOURDIEU, Pierre. <em>La distinction: critique sociale du jugement</em>. Paris: Éditions de Minuit, 1979. <a href="https://www.leseditionsdeminuit.fr/livre-La_Distinction-1954-1-1-0-1.html" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BRASIL. Lei nº 12.305, de 2 de agosto de 2010. Política Nacional de Resíduos Sólidos. <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BRASIL. Decreto nº 10.240, de 12 de fevereiro de 2020. Logística reversa de produtos eletroeletrônicos de uso doméstico e seus componentes. <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10240.htm" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BRASIL. Ministério das Comunicações. Programa Computadores para Inclusão. Anexo V — Roteiro para elaboração da proposta. <a href="https://www.gov.br/mcom/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/computadores-para-inclusao-1/SEI_11920328_Anexo_V.pdf" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>Logística reversa de equipamentos eletroeletrônicos. Estudo de viabilidade técnica e econômica, 2012. Documento disponibilizado pelo CETEM. Usado para as etapas gerais do processamento, não como diagnóstico atual do setor. <a href="https://www.gov.br/cetem/pt-br/pesquisa-e-desenvolvimento/reminare/central-de-conteudos/documentos/evte_eletroeletronico_2012_inventta.pdf" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BASEL ACTION NETWORK; SILICON VALLEY TOXICS COALITION. <em>Exporting harm: the high-tech trashing of Asia</em>. Seattle; San José, 25 fev. 2002. <a href="https://www.ban.org/s/Exporting-Harm-Report.pdf" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BASEL ACTION NETWORK. In pictures: infamous Chinese e-waste town finally closes doors to imports. 16 dez. 2015. <a href="https://www.ban.org/news-new/2015/12/16/infamous-chinese-e-waste-town-finally-closes-doors-to-imports" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>HUO, Xia et al. Elevated blood lead levels of children in Guiyu, an electronic waste recycling town in China. <em>Environmental Health Perspectives</em>, v. 115, n. 7, p. 1113–1117, 2007. <a href="https://pubmed.ncbi.nlm.nih.gov/17637931/" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>MUJEZINOVIC, Davor. Electronic waste in Guiyu: a city under change. <em>Arcadia</em>, n. 29, 2019. <a href="https://www.environmentandsociety.org/arcadia/electronic-waste-guiyu-city-under-change" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>UNITAR; ITU. <em>The Global E-waste Monitor 2024</em>. Dados mundiais de 2022 e projeção para 2030. Síntese oficial: <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>UNITAR; ITU. <em>The Global E-waste Monitor 2024</em>. 2. ed., nov. 2024. Geração brasileira em 2022: p. 70; valores econômicos e custos externalizados: pp. 54–56. Relatório: <a href="https://ewastemonitor.info/wp-content/uploads/2024/12/GEM_2024_EN_11_NOV-web.pdf" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>CONVERGÊNCIA DIGITAL. Lixo eletrônico: 72% dos brasileiros guardam celulares velhos. 7 out. 2021. Divulgação da pesquisa de 2021 da Green Eletron; usada apenas no card da capa. <a href="https://convergenciadigital.com.br/mercado/lixo-eletrnico-72-dos-brasileiros-guardam-celulares-velhos" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>GREEN ELETRON. Brasileiros conhecem mais os coletores de eletroeletrônicos e pilhas, mas falta ação: o descarte correto. 1 nov. 2023. <a href="https://greeneletron.org.br/blog/brasileiros-conhecem-mais-os-coletores-de-eletroeletronicos-e-pilhas-mas-falta-acao-o-descarte-correto/" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>GREEN ELETRON; RADAR PESQUISAS. Resíduos eletrônicos no Brasil 2023. Metodologia e amostra: p. 9; armazenamento doméstico: p. 15. <a href="https://greeneletron.org.br/wp-content/uploads/2025/04/RELATORIO_DADOS_2023.pdf" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>GREEN ELETRON. Como a logística reversa ajuda na conservação dos rios? 28 nov. 2025a. Dado utilizado: desconhecimento do descarte entre quem guarda aparelhos. <a href="https://greeneletron.org.br/blog/logistica-reversa-eletroeletronicos-conservacao-rios/" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>GREEN ELETRON. Brasileiros valorizam e reconhecem iniciativas de logística reversa das marcas, aponta pesquisa da Green Eletron. 24 ago. 2025b. Pesquisa com a Radar Pesquisas. <a href="https://greeneletron.org.br/blog/brasileiros-valorizam-e-reconhecem-iniciativas-de-logistica-reversa-das-marcas-aponta-pesquisa-da-green-eletron/" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p>BRASIL. Ministério das Comunicações. MCom comemora o Dia Mundial do Meio Ambiente. Publicado em 26 maio 2025; atualizado em 4 jun. 2025. Resultado acumulado do programa. <a href="https://www.gov.br/mcom/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/computadores-para-inclusao-1/mcom-comemora-o-dia-mundial-do-meio-ambiente/" target="_blank" rel="noopener">Consultar fonte</a></p>
+    <p class="credits">Imagem da capa: arquivo fornecido pela equipe. Demais imagens: Wikimedia Commons (MikroLogika, Prefeitura de Porto Alegre, Ms angie gray, Syced, Jcaravanos, Chris/Flickr), licenças indicadas nas legendas. Vídeos: Portland BPS (YouTube) e @mundoconectadobr (Instagram), reproduzidos com crédito e link para o original.</p>
+  </div>
+  <span class="folio">OBSOLETA · 18</span>
+</section>
+
+<footer class="fim reveal">
+  A vida depois do <span>descarte</span>
+  <small>Obsoleta · Edição nº 1 · Instituto J&amp;F · 2026</small>
+</footer>
+
+<div class="tip" id="tip" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
