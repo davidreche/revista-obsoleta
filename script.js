@@ -188,7 +188,7 @@ document.documentElement.classList.add("js");
     const from = parseInt(dpct.dataset.v || "0", 10), t0 = performance.now();
     (function tick(t){
       const p = Math.min(1, (t - t0) / 1200), v = Math.round(from + (target - from) * (1 - Math.pow(1 - p, 3)));
-      dpct.textContent = `Instalando… ${v}%`; dpct.dataset.v = v;
+      dpct.textContent = `Instalando… ${v}%`; dpct.dataset.v = v; $("#dlg-prog").dataset.tip = `Atualização do planeta: ${v}% instalada`;
       if (p < 1) requestAnimationFrame(tick);
     })(t0);
   }
@@ -277,11 +277,12 @@ document.documentElement.classList.add("js");
 
   /* ---------- tooltips dos gráficos ---------- */
   const tip = $("#tip");
-  $$("g.m").forEach(g => {
+  $$("g.m,[data-tip]").forEach(g => {
     g.addEventListener("mousemove", e => {
+      e.stopPropagation();
       tip.textContent = g.dataset.tip; tip.hidden = false;
       tip.style.left = Math.min(e.clientX + 14, innerWidth - 270) + "px";
-      tip.style.top = (e.clientY + 14) + "px";
+      tip.style.top = Math.min(e.clientY + 14, innerHeight - tip.offsetHeight - 8) + "px";
     });
     g.addEventListener("mouseleave", () => tip.hidden = true);
   });

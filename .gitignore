@@ -1,0 +1,6 @@
+# usado só para publicar no claude.ai
+publicar.html
+textos-da-revista.md
+# fotos originais dos integrantes (a revista usa as recortadas em img/integrantes/)
+img/*.jpeg
+img/casarini.png

@@ -47,7 +47,7 @@
       <div class="dialog-b">
         <h2 id="dlg-h" data-text="Seu planeta precisa ser atualizado">Seu planeta precisa ser atualizado</h2>
         <p id="dlg-p">62 milhões de toneladas de lixo eletrônico foram geradas em 2022. A reciclagem documentada não acompanha. Reiniciar o modelo de consumo pode levar algum tempo.</p>
-        <div class="prog" aria-hidden="true"><i id="dlg-bar"></i></div>
+        <div class="prog" id="dlg-prog" aria-hidden="true" data-tip="Instalando… 0%"><i id="dlg-bar"></i></div>
         <div class="pct" id="dlg-pct" aria-hidden="true">Instalando… 0%</div>
         <div class="btns">
           <button id="dlg-later">Lembrar mais tarde</button>
@@ -75,12 +75,12 @@
     <p class="cap reveal" data-d="1">Instituto J&amp;F · Trabalho Multidisciplinar · São Paulo, 2026</p>
   </div>
   <div class="members">
-    <article class="member reveal"><span class="idx">01</span><h3>Caio Mezini</h3><p class="member-full">Caio Mezini de Paula Machado</p></article>
-    <article class="member reveal" data-d="1"><span class="idx">02</span><h3>David Bento</h3><p class="member-full">David Lucas Reche Garcia Bento</p></article>
-    <article class="member reveal" data-d="2"><span class="idx">03</span><h3>Guilherme Ferreira</h3><p class="member-full">Guilherme Fernandes Marcato Ferreira</p></article>
-    <article class="member reveal"><span class="idx">04</span><h3>Matheus Raimundo</h3><p class="member-full">Matheus Rezende Nascimento Raimundo</p></article>
-    <article class="member reveal" data-d="1"><span class="idx">05</span><h3>Pedro Casarini</h3><p class="member-full">Pedro Henrique Casarini Alves</p></article>
-    <article class="member reveal" data-d="2"><span class="idx">06</span><h3>Pedro Yada Barbeitos</h3><p class="member-full">Pedro Yada Barbeitos</p></article>
+    <article class="member reveal"><img class="member-photo" src="img/integrantes/caio.jpg" alt="Foto de Caio Mezini" loading="lazy"><span class="idx">01</span><h3>Caio Mezini</h3><p class="member-full">Caio Mezini de Paula Machado</p></article>
+    <article class="member reveal" data-d="1"><img class="member-photo" src="img/integrantes/david.jpg" alt="Foto de David Bento" loading="lazy"><span class="idx">02</span><h3>David Bento</h3><p class="member-full">David Lucas Reche Garcia Bento</p></article>
+    <article class="member reveal" data-d="2"><img class="member-photo" src="img/integrantes/guilherme.jpg" alt="Foto de Guilherme Ferreira" loading="lazy"><span class="idx">03</span><h3>Guilherme Ferreira</h3><p class="member-full">Guilherme Fernandes Marcato Ferreira</p></article>
+    <article class="member reveal"><img class="member-photo" src="img/integrantes/matheus.jpg" alt="Foto de Matheus Rezende" loading="lazy"><span class="idx">04</span><h3>Matheus Rezende</h3><p class="member-full">Matheus Rezende Nascimento Raimundo</p></article>
+    <article class="member reveal" data-d="1"><img class="member-photo" src="img/integrantes/casarini.jpg" alt="Foto de Pedro Casarini" loading="lazy"><span class="idx">05</span><h3>Pedro Casarini</h3><p class="member-full">Pedro Henrique Casarini Alves</p></article>
+    <article class="member reveal" data-d="2"><img class="member-photo" src="img/integrantes/yada.jpg" alt="Foto de Pedro Yada Barbeitos" loading="lazy"><span class="idx">06</span><h3>Pedro Yada Barbeitos</h3><p class="member-full">Pedro Yada Barbeitos</p></article>
   </div>
   <span class="folio">OBSOLETA · 02</span>
 </section>
@@ -215,14 +215,14 @@
         <div class="big"><span class="count" data-to="85">85</span><small>%</small></div>
         <p class="stat-l">dos entrevistados em uma pesquisa online afirmaram guardar algum eletrônico sem utilidade em casa</p>
         <p class="stat-s">Quem respondeu: 2.640 pessoas de 18 a 65 anos, das classes A, B e C, em 21 estados</p>
-        <div class="dots" aria-hidden="true" data-on="85"></div>
+        <div class="dots" aria-hidden="true" data-on="85" data-tip="85 de cada 100 entrevistados guardam algum eletrônico sem utilidade em casa (Green Eletron e Radar Pesquisas, 2023; 2.640 pessoas)"></div>
       </div>
       <div class="box stat reveal" data-d="1">
         <span class="box-tag">Green Eletron, 2025a</span>
         <div class="big"><span class="count" data-to="43">43</span><small>%</small></div>
         <p class="stat-l">das pessoas que guardavam aparelhos, em outra pesquisa da Green Eletron, disseram não saber como descartá-los corretamente</p>
         <p class="stat-s">A divulgação não informa quantas pessoas formam esse grupo</p>
-        <div class="dots" aria-hidden="true" data-on="43"></div>
+        <div class="dots" aria-hidden="true" data-on="43" data-tip="43 de cada 100 pessoas que guardavam aparelhos não sabiam como descartá-los corretamente (Green Eletron, 2025a)"></div>
       </div>
     </aside>
   </div>
@@ -282,7 +282,7 @@
       <div class="box stat reveal">
         <span class="box-tag">UNITAR/ITU, 2024</span>
         <p class="stat-l" style="margin:0 0 10px">Massa de resíduos eletrônicos gerada no mundo em 2022</p>
-        <div class="meter" role="img" aria-label="22,3% com coleta e reciclagem formal documentadas; 77,7% fora desse registro"><i data-w="22.3"></i></div>
+        <div class="meter" role="img" aria-label="22,3% com coleta e reciclagem formal documentadas; 77,7% fora desse registro"><i data-w="22.3" data-tip="22,3%: coleta e reciclagem formal documentadas em 2022 (UNITAR/ITU, 2024)"></i><s data-tip="77,7%: resíduos eletrônicos fora desse registro formal em 2022 (UNITAR/ITU, 2024)"></s></div>
         <div class="meter-l"><span><b>22,3%</b> coleta e reciclagem formal documentadas</span><span><b>77,7%</b> fora desse registro</span></div>
       </div>
       <div class="box stat reveal" data-d="1">
@@ -444,6 +444,32 @@
       <p class="cap">Placa de circuito triturada, etapa anterior à separação dos materiais. Science Square Tsukuba, Japão. Foto: Syced / Wikimedia Commons, CC0</p>
     </aside>
   </div>
+  <figure class="box ciclo reveal">
+    <span class="box-tag">Linear × circular</span>
+    <div class="ciclo-grid">
+      <div class="linear">
+        <h4>Economia linear</h4>
+        <p>O produto segue em uma só direção: da extração ao descarte.</p>
+        <ol class="lin-steps">
+          <li>Extrair</li><li>Produzir</li><li>Usar</li><li class="end">Descartar</li>
+        </ol>
+      </div>
+      <div class="circ">
+        <h4>Economia circular</h4>
+        <p>Manter produtos e materiais em uso por mais tempo. A reciclagem participa do ciclo, mas não substitui as etapas anteriores.</p>
+        <svg class="ciclo-svg" viewBox="0 0 500 500" role="img" aria-label="Economia circular em ciclo: durabilidade, manutenção, reparo, reúso e recuperação, que inclui a reciclagem, voltando ao início">
+            <circle class="ring" cx="250" cy="250" r="165"/>
+            <circle class="ring-flow" cx="250" cy="250" r="165"/>
+            <path class="arr" d="M-8,-8 L8,0 L-8,8 Z" transform="translate(347.0 116.5) rotate(36)"/><path class="arr" d="M-8,-8 L8,0 L-8,8 Z" transform="translate(406.9 301.0) rotate(108)"/><path class="arr" d="M-8,-8 L8,0 L-8,8 Z" transform="translate(250.0 415.0) rotate(180)"/><path class="arr" d="M-8,-8 L8,0 L-8,8 Z" transform="translate(93.1 301.0) rotate(252)"/><path class="arr" d="M-8,-8 L8,0 L-8,8 Z" transform="translate(153.0 116.5) rotate(324)"/>
+            <circle class="orbit" cx="250" cy="85" r="7"/>
+            <g class="node" style="--i:0"><circle cx="250.0" cy="85.0" r="54"/><text x="250.0" y="85.0" text-anchor="middle"><tspan x="250.0" dy="0.35em">Durabilidade</tspan></text></g><g class="node" style="--i:1"><circle cx="406.9" cy="199.0" r="54"/><text x="406.9" y="199.0" text-anchor="middle"><tspan x="406.9" dy="0.35em">Manutenção</tspan></text></g><g class="node" style="--i:2"><circle cx="347.0" cy="383.5" r="54"/><text x="347.0" y="383.5" text-anchor="middle"><tspan x="347.0" dy="0.35em">Reparo</tspan></text></g><g class="node" style="--i:3"><circle cx="153.0" cy="383.5" r="54"/><text x="153.0" y="383.5" text-anchor="middle"><tspan x="153.0" dy="0.35em">Reúso</tspan></text></g><g class="node" style="--i:4"><circle cx="93.1" cy="199.0" r="54"/><text x="93.1" y="199.0" text-anchor="middle"><tspan x="93.1" dy="-0.2em">Recuperação</tspan><tspan class="sub" x="93.1" dy="1.5em">inclui reciclagem</tspan></text></g>
+            <text class="mid" x="250" y="242" text-anchor="middle">Economia</text>
+            <text class="mid" x="250" y="274" text-anchor="middle">circular</text>
+          </svg>
+      </div>
+    </div>
+    <figcaption class="cap">A circularidade deve ser examinada pelos resultados: quanto voltou ao uso, o que foi recuperado e o que permaneceu sem aproveitamento?</figcaption>
+  </figure>
   <span class="folio">OBSOLETA · 13</span>
 </section>
 
