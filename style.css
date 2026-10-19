@@ -446,3 +446,6 @@ h3{font-size:clamp(22px,2vw,28px)}
 .meter s:hover{background:color-mix(in srgb,var(--ink) 18%,var(--line))}
 .dots,.dialog .prog{cursor:help}
 .dots:hover i.on{background:var(--accent2)}
+
+/* ---------- texto corrido justificado, como em revista impressa ---------- */
+.body p,.frente p,.part p,.gy-lede,.frentes-intro{text-align:justify;text-align-last:left;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;text-wrap:pretty;word-spacing:-.01em}
